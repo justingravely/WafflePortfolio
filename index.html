@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>waffleDoggy</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-wrapper">
+      <div class="header-img-wrap">
+        <img src="images/ape.png" alt="dog">
+      </div>
+      <div class="header-info">
+        <i id="exclamation" class="fas fa-exclamation"></i>
+        <h1>waffleDoggy</h1>
+        <p><span>your</span> <span>new</span> <span>website</span> <span>buddy</span></p>
+      </div>
+    </div>
+    <i id="bone" class="fas fa-bone"></i>
+    <i id="check"class="fas fa-check"></i>
+
+
+    <div class="loading">
+      <p>loading<span>.</span><span>.</span><span>.</span></p>
+    </div>
+  </header>
+
+  <!-- <section class="about">
+  <div class="greeting">
+    <h2>Hi there</h2>
+  </div>  
+  <div class="aboutOne">
+    <p>I'm a web developer & designer with an eye for user friendly design that looks good on any device.</p>
+  </div>
+  <p>I wanna help you get online hassle-free with a clean finish. Whether you need a business website, a personal blog, or even an online store, I've got you covered.</p>
+  <p>I'm an open book. Below you can check out my progress. I couldn't stand studying even an hour a day until April!</p>
+</section> -->
+
+  <!-- <section class="skills">
+  <h2>Skill-Set</h2>
+  <p>HTML CSS JAVASCRIPT UX-DESIGN GITHUB</p>
+</section> -->
+
+  <script>
+    var loading = document.querySelector(".loading");
+    var boney = document.getElementById("bone");
+    var header = document.querySelector(".header-wrapper");
+    var checky = document.getElementById("check");
+
+// loading
+    var timeout = setTimeout(function () {
+      runCode();
+    }, 3000);
+
+    function runCode() {
+      clearTimeout(timeout);
+      loading.innerHTML = "WOOF!";
+      loading.style.fontSize = "3em";
+      boney.style.display = "none";
+      checky.style.display = "inline";
+    }
+
+    var timeouttwo = setTimeout(function () {
+      runCodetwo();
+    }, 4000);
+
+    function runCodetwo() {
+      clearTimeout(timeout);
+      loading.style.display = "none";
+      header.style.display = "inline";
+      check.style.display = "none";
+    }
+
+// header animations
+
+
+  </script>
+
+</body>
+
+</html>
