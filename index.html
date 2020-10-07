@@ -9,7 +9,7 @@
   <title>waffleDoggy</title>
 </head>
 
-<body>
+<body onwheel="scrollTime(event)">
 
   <header>
     <div class="header-wrapper">
@@ -31,29 +31,64 @@
     </div>
   </header>
 
-  <!-- <section class="about">
+  <section class="about">
   <div class="greeting">
     <h2>Hi there</h2>
   </div>  
   <div class="aboutOne">
     <p>I'm a web developer & designer with an eye for user friendly design that looks good on any device.</p>
+    <p>I wanna help you get online hassle-free with a clean finish. Whether you need a business website, a personal blog, or even an online store, I've got you covered.</p>
+    <p>I'm an open book. Below you can check out my progress. I couldn't stand studying even an hour a day until April!</p>
   </div>
-  <p>I wanna help you get online hassle-free with a clean finish. Whether you need a business website, a personal blog, or even an online store, I've got you covered.</p>
-  <p>I'm an open book. Below you can check out my progress. I couldn't stand studying even an hour a day until April!</p>
-</section> -->
+</section>
 
-  <!-- <section class="skills">
-  <h2>Skill-Set</h2>
-  <p>HTML CSS JAVASCRIPT UX-DESIGN GITHUB</p>
-</section> -->
+  <section class="skills">
+    <div class="skills-inner">
+      <h2>Skill-Set</h2>
+      <p>HTML CSS JAVASCRIPT UX-DESIGN GITHUB</p>
+    </div>
+</section>
+
+<div class="location">
+  <div class="location-inner">
+    <i class="fas fa-angle-up"></i>
+    <i id="home" class="fas fa-home"></i>
+    <i id="about" class="fas fa-address-card"></i>
+    <i id="skills"class="fas fa-wrench"></i>
+    <i class="fas fa-angle-down"></i>
+  </div>
+</div>
 
   <script>
+    // intro
     var loading = document.querySelector(".loading");
     var boney = document.getElementById("bone");
     var header = document.querySelector(".header-wrapper");
     var checky = document.getElementById("check");
 
+    // sections
+    var actualheader = document.querySelector("header");
+    var about = document.querySelector(".about");
+    var skills = document.querySelector(".skills");
+
+    // sidebar
+    var sideBar = document.querySelector(".location");
+    var homeIcon = document.getElementById("home");
+    var aboutIcon = document.getElementById("about");
+    var skillsIcon = document.getElementById("skills");
+
+    homeIcon.addEventListener("click", First);
+    aboutIcon.addEventListener("click", Second);
+    skillsIcon.addEventListener("click", Third);
+
+
+
+
 // loading
+// ORIGINAL TIME WAS 3000, 4000
+    // lettuceCount is the variable that prevents scrolling while loading
+    var lettuceCount = 0;
+
     var timeout = setTimeout(function () {
       runCode();
     }, 3000);
@@ -75,7 +110,88 @@
       loading.style.display = "none";
       header.style.display = "inline";
       check.style.display = "none";
+      lettuceCount += 1;
+      scrollPosition = 0;
+      sideBar.style.display = "flex";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+    };
+
+    // scroll sections code
+
+    function First() {
+      actualheader.style.display = "flex"
+      about.style.display = "none"
+      skills.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "1";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
     }
+
+    function Second() {
+      actualheader.style.display = "none"
+      about.style.display = "flex"
+      skills.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "1";
+      skillsIcon.style.opacity = "0.3";
+    }
+
+    function Third() {
+      actualheader.style.display = "none"
+      about.style.display = "none"
+      skills.style.display = "flex";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "1";
+    }
+
+    // scroll function
+    var scrollPosition = 0;
+
+
+    function scrollTime(event){
+      var y = event.deltaY;
+
+      if (y < 0){
+        scrollPosition++;
+        console.log(scrollPosition);
+      } else {
+        scrollPosition--
+        console.log(scrollPosition);
+      };
+
+      if (scrollPosition > 0) {
+        scrollPosition = 0;
+      };
+
+// CHECK HERE HERE IF YOU CANT SCROLL LOWER
+      if (scrollPosition < -2) {
+        scrollPosition = -2;
+      };
+
+      if (lettuceCount < 1) {
+        event.preventDefault();
+      } else if (scrollPosition === 0) {
+        First();
+      } else if (scrollPosition === -1) {
+        Second();
+      } else if (scrollPosition === -2) {
+        Third();
+      }
+    }
+
+    console.log(scrollPosition);
+
+    
+
+  
+
+
+    
 
 // header animations
 
