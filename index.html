@@ -43,8 +43,12 @@
         <i id="device" class="fas fa-desktop"></i>
         <i id="checks" class="fas fa-check"></i>
       </div> 
-      <p>I wanna help you get online hassle-free with a clean finish. Whether you need a business website, a personal
-        blog, or even an online store, I've got you covered.</p>
+      <p>I want to help you get online hassle-free with a clean finish. Whether you need a:
+        <ul id="about-details">
+          <li>Personal blog</li>
+          <li>Business Website</li>
+          <li>Online Store</li>
+        </ul>
     </div>
   </section>
 
@@ -52,14 +56,12 @@
     <div class="clockify-wrapper">
       <div class="row">
         <div class="column">
-          <img src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png"
-            onclick="openModal();currentSlide(1)" class="hover-shadow">
+          <img src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
         </div>
       </div>
       <p id="clockify">Progress recorded with <a href="https://clockify.me/" target="_blank">clockify</a> 10/3/2020</p>
 
-      <p>I'm an open book. Here's my progress so far. I couldn't stand studying even an hour a day until
-        April!</p>
+      <p id="time-p">I'm an open book. Here's my progress so far.</p>
     </div>
     <!-- style for lightbox -->
     <style>
@@ -250,8 +252,14 @@
 
   <section class="skills">
     <div class="skills-inner">
-      <h2>Skill-Set</h2>
-      <p>HTML CSS JAVASCRIPT UX-DESIGN GITHUB</p>
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js-square"></i>
+        <p id="xd" class="xdclass">Xd</p>
+        <i class="fab fa-github-square"></i>
+      </div>
     </div>
   </section>
 
@@ -297,7 +305,7 @@
 
     var timeout = setTimeout(function () {
       runCode();
-    }, 3000);
+    }, 2000);
 
     function runCode() {
       clearTimeout(timeout);
@@ -308,7 +316,7 @@
     }
     var timeouttwo = setTimeout(function () {
       runCodetwo();
-    }, 4000);
+    }, 3000);
 
     function runCodetwo() {
       clearTimeout(timeout);
