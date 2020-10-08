@@ -15,7 +15,7 @@ body {
   color: white;
   overflow: hidden;
 }
-/* location */
+/* location *//* location *//* location *//* location *//* location *//* location *//* location *//* location */
 .location {
   position: absolute;
   right: 0;
@@ -38,9 +38,7 @@ body {
   font-size: 1.1em;
 }
 
-.location-inner i:first-child, .location-inner i:last-child {
-  font-size: 2em;
-}
+
 
 
 /* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header */
@@ -80,7 +78,7 @@ header {
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   z-index: -2;
-  animation-delay: 0.3s;
+  animation-delay: 0.4s;
   opacity: 0;
 }
 
@@ -120,6 +118,14 @@ header .header-img-wrap {
   }
 }
 
+@keyframes riseIn {
+  0% {
+    margin-top: 50em;
+  } 100% {
+    margin-top: 0em;
+  }
+}
+
 header img {
   width: 100%;
   border-radius: 50%;
@@ -130,6 +136,16 @@ header img {
   width: fit-content;
   text-align: center;
   font-size: 1.3em;
+  animation: headRiseIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes headRiseIn {
+  0% {
+    margin-top: 50em;
+  } 100% {
+    margin-top: 5em;
+  }
 }
 
 @keyframes loadIn {
@@ -215,6 +231,9 @@ header img {
   display: none;
   flex-direction: column;
   margin: auto;
+  animation: riseIn;
+  animation-duration: 0.5s;
+  font-size: 1.2em;
 }
 
 .about .greeting {
@@ -227,6 +246,62 @@ header img {
   width: 20em;
   margin: auto;
   margin-top: 0;
+  text-align: center;
+}
+
+.welcome-icons {
+  margin: auto;
+  width: fit-content;
+}
+
+.welcome-icons #device {
+  font-size: 3em;
+  margin: 0em;
+  box-shadow: 1px 1px 5px rgba(43, 43, 43, 0.747);
+  border-radius: 25px;
+}
+
+.welcome-icons i {
+  padding: 0.3em;
+}
+
+.welcome-icons #checks {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 2.8em;
+  margin-left: -1.6em;
+  color: rgb(255, 0, 255);
+}
+
+.welcome-icons #checks:last-child {
+  margin-left: -1.2em;
+}
+
+/* time */
+.time {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  display: none;
+  flex-direction: column;
+  margin: auto;
+  animation: riseIn;
+  animation-duration: 0.5s;
+}
+
+.time .clockify-wrapper {
+  margin-top: 5em;
+  width: 80%;
+  margin: auto;
+}
+
+.time img {
+  width: 100%;
+}
+
+.time p {
+  margin: auto;
+  width: fit-content;
 }
 
 /* skills */
