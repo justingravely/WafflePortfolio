@@ -38,6 +38,11 @@ body {
   font-size: 1.1em;
 }
 
+.location-inner i:first-child, .location-inner i:last-child {
+  font-size: 2em;
+}
+
+
 /* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header *//* header */
 header {
   height: 100%;

@@ -18,7 +18,7 @@
       </div>
       <div class="header-info">
         <i id="exclamation" class="fas fa-exclamation"></i>
-        <h1>waffleDoggy</h1>
+        <h1 onclick="location.reload();">waffleDoggy</h1>
         <p><span>your</span> <span>new</span> <span>website</span> <span>buddy</span></p>
       </div>
     </div>
@@ -51,11 +51,11 @@
 
 <div class="location">
   <div class="location-inner">
-    <i class="fas fa-angle-up"></i>
+    <i id="arrowUp" class="fas fa-angle-up"></i>
     <i id="home" class="fas fa-home"></i>
     <i id="about" class="fas fa-address-card"></i>
-    <i id="skills"class="fas fa-wrench"></i>
-    <i class="fas fa-angle-down"></i>
+    <i id="skills" class="fas fa-wrench"></i>
+    <i id="arrowDown" class="fas fa-angle-down"></i>
   </div>
 </div>
 
@@ -76,11 +76,50 @@
     var homeIcon = document.getElementById("home");
     var aboutIcon = document.getElementById("about");
     var skillsIcon = document.getElementById("skills");
-
+    var arrowUp = document.getElementById("arrowUp");
+    var arrowDown = document.getElementById("arrowDown");
+    
+    arrowUp.addEventListener("click", arrowUpFunction);
     homeIcon.addEventListener("click", First);
     aboutIcon.addEventListener("click", Second);
     skillsIcon.addEventListener("click", Third);
+    arrowDown.addEventListener("click", arrowDownFunction);
 
+// ARROW BUTTON SCROLLING
+    function arrowUpFunction() {
+      scrollPosition++;
+      if (scrollPosition === 0) {
+        First();
+      } else if (scrollPosition === -1) {
+        Second();
+      } else if (scrollPosition === -2) {
+        Third();
+      };
+      if (scrollPosition > 0) {
+        scrollPosition = 0;
+      };
+// CHECK HERE HERE IF YOU CANT SCROLL LOWER
+      if (scrollPosition < -2) {
+        scrollPosition = -2;
+      };
+    }
+    function arrowDownFunction() {
+      scrollPosition--;
+      if (scrollPosition === 0) {
+        First();
+      } else if (scrollPosition === -1) {
+        Second();
+      } else if (scrollPosition === -2) {
+        Third();
+      };
+      if (scrollPosition > 0) {
+        scrollPosition = 0;
+      };
+// CHECK HERE HERE IF YOU CANT SCROLL LOWER
+      if (scrollPosition < -2) {
+        scrollPosition = -2;
+      };
+    }
 
 
 
@@ -100,7 +139,6 @@
       boney.style.display = "none";
       checky.style.display = "inline";
     }
-
     var timeouttwo = setTimeout(function () {
       runCodetwo();
     }, 4000);
@@ -184,16 +222,8 @@
       }
     }
 
-    console.log(scrollPosition);
+    // eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
-    
-
-  
-
-
-    
-
-// header animations
 
 
   </script>
