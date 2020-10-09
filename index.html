@@ -32,23 +32,25 @@
   </header>
 
   <section class="about">
-    <div class="greeting">
-      <h2>Hi there</h2>
-    </div>
-    <div class="aboutOne">
-      <p>I'm a web developer & designer with an eye for user friendly design that looks good on any device.</p>
-      <div class="welcome-icons">
-        <i id="device" class="fas fa-mobile-alt"></i>
-        <i id="checks" class="fas fa-check"></i>
-        <i id="device" class="fas fa-desktop"></i>
-        <i id="checks" class="fas fa-check"></i>
-      </div> 
-      <p>I want to help you get online hassle-free with a clean finish. Whether you need a:
+    <div class="about-wrapper">
+      <div class="greeting">
+        <h2>Hi there</h2>
+      </div>
+      <div class="aboutOne">
+        <p>I'm a web developer & designer with an eye for user friendly design that looks good on any device.</p>
+        <div class="welcome-icons">
+          <i id="device" class="fas fa-mobile-alt"></i>
+          <i id="checks" class="fas fa-check"></i>
+          <i id="device" class="fas fa-desktop"></i>
+          <i id="checks" class="fas fa-check"></i>
+        </div>
+        <p>I can get you online hassle-free with a clean finish. Whether you need a:
         <ul id="about-details">
           <li>Personal blog</li>
           <li>Business Website</li>
           <li>Online Store</li>
         </ul>
+      </div>
     </div>
   </section>
 
@@ -56,7 +58,8 @@
     <div class="clockify-wrapper">
       <div class="row">
         <div class="column">
-          <img src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          <img src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png"
+            onclick="openModal();currentSlide(1)" class="hover-shadow">
         </div>
       </div>
       <p id="clockify">Progress recorded with <a href="https://clockify.me/" target="_blank">clockify</a> 10/3/2020</p>
@@ -244,34 +247,103 @@
           dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
       }
     </script>
   </section>
 
+  <!-- skills -->
   <section class="skills">
-    <div class="skills-inner">
+    <div class="skills-wrapper">
       <h2>Skills</h2>
-      <div class="skills-icons">
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js-square"></i>
-        <p id="xd" class="xdclass">Xd</p>
-        <i class="fab fa-github-square"></i>
+      <div class="skills-inner">
+        <div class="skill-bar">
+          <div class="bar"><i class="fab fa-html5"></i></div>
+          <div class="bar"><i class="fab fa-css3-alt"></i></div>
+          <div class="bar"><i class="fab fa-js-square"></i></div>
+          <div class="bar"><i id="design-id" class="fas fa-palette"></i></div>
+          <div class="bar"><i class="fab fa-github-square"></i></div>
+        </div>
+      </div>
+      <div class="skill-numbers">
+        <ul>
+          <li>100%</li>
+          <li>80%</li>
+          <li>60%</li>
+          <li>40%</li>
+          <li>20%</li>
+        </ul>
+      </div>
+      <div class="skill-names">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Design</li>
+          <li>github</li>
+        </ul>
       </div>
     </div>
+  </section>
+
+  <section class="projects">
+    <a class="top-button" href="#top">Scroll Up</a>
+    <div class="wrapper-wrapper">
+      <div class="project-wrap">
+        <a id="top" href="http://heavenlyhorsehealth.com/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752330125332185198/unknown.png"></a>
+      </div>
+      <div class="project-wrap" id="placeholder">
+        <a href="https://justingravely.github.io/FeM-Pricing-Component/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/762050870506291220/unknown.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967950680457266/dws.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a href="https://justingravely.github.io/SimpleJesusSiteDesign/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752331172637573150/slthumb.png"></a>
+      </div>
+      <div class="project-wrap" id="placeholder">
+        <a href="https://justingravely.github.io/IcyTest/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752939883928223744/designid2.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967953113153536/tribute.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967951104212992/forms.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a href="https://justingravely.github.io/Portfolio/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752332920038883388/OP.png"></a>
+      </div>
+      <div class="project-wrap">
+        <a id="bottom" href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967947891376148/techni.png"></a>
+      </div>
+    </div>
+    <a class="bottom-button" href="#bottom">Scroll Down</a>
+  </section>
+
+  <section class="contact">
+    Hi
   </section>
 
   <div class="location">
     <div class="location-inner">
       <i id="home" class="fas fa-home"></i>
-      <i id="about" class="fas fa-address-card"></i>
+      <i id="about" class="fas fa-address-book"></i>
       <i id="time" class="fas fa-clock"></i>
       <i id="skills" class="fas fa-wrench"></i>
+      <i id="projects" class="fas fa-briefcase"></i>
+      <i id="contact" class="fas fa-envelope"></i>
     </div>
   </div>
 
+  <!-- big fella -->
   <script>
     // intro
     var loading = document.querySelector(".loading");
@@ -284,6 +356,8 @@
     var about = document.querySelector(".about");
     var time = document.querySelector(".time")
     var skills = document.querySelector(".skills");
+    var projects = document.querySelector(".projects");
+    var contact = document.querySelector(".contact");
 
     // sidebar
     var sideBar = document.querySelector(".location");
@@ -291,11 +365,15 @@
     var aboutIcon = document.getElementById("about");
     var timeIcon = document.getElementById("time")
     var skillsIcon = document.getElementById("skills");
+    var projectIcon = document.getElementById("projects");
+    var contactIcon = document.getElementById("contact");
 
     homeIcon.addEventListener("click", First);
     aboutIcon.addEventListener("click", Second);
     timeIcon.addEventListener("click", Third)
     skillsIcon.addEventListener("click", Fourth);
+    projectIcon.addEventListener("click", Fifth);
+    contactIcon.addEventListener("click", Sixth);
 
 
     // loading
@@ -329,6 +407,8 @@
       aboutIcon.style.opacity = "0.3";
       skillsIcon.style.opacity = "0.3";
       timeIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
     };
 
     // scroll sections code
@@ -338,11 +418,15 @@
       about.style.display = "none";
       time.style.display = "none";
       skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "none";
       // icons
       homeIcon.style.opacity = "1";
       aboutIcon.style.opacity = "0.3";
       timeIcon.style.opacity = "0.3";
       skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
     }
 
     function Second() {
@@ -350,11 +434,15 @@
       about.style.display = "flex";
       time.style.display = "none";
       skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "none";
       // icons
       homeIcon.style.opacity = "0.3";
       aboutIcon.style.opacity = "1";
       timeIcon.style.opacity = "0.3";
       skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
     }
 
     function Third() {
@@ -362,11 +450,15 @@
       about.style.display = "none";
       time.style.display = "flex";
       skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "none";
       // icons
       homeIcon.style.opacity = "0.3";
       aboutIcon.style.opacity = "0.3";
       timeIcon.style.opacity = "1";
       skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
     }
 
     function Fourth() {
@@ -374,11 +466,47 @@
       about.style.display = "none";
       time.style.display = "none";
       skills.style.display = "flex";
+      projects.style.display = "none";
+      contact.style.display = "none";
       // icons
       homeIcon.style.opacity = "0.3";
       aboutIcon.style.opacity = "0.3";
       timeIcon.style.opacity = "0.3";
       skillsIcon.style.opacity = "1";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
+    }
+
+    function Fifth() {
+      actualheader.style.display = "none";
+      about.style.display = "none";
+      time.style.display = "none";
+      skills.style.display = "none";
+      projects.style.display = "flex";
+      contact.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      timeIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "1";
+      contactIcon.style.opacity = "0.3";
+    }
+
+    function Sixth() {
+      actualheader.style.display = "none";
+      about.style.display = "none";
+      time.style.display = "none";
+      skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "flex";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      timeIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "1";
     }
 
     // scroll function
@@ -400,8 +528,8 @@
         scrollPosition = 0;
       };
       // CHECK HERE HERE IF YOU CANT SCROLL LOWER
-      if (scrollPosition < -3) {
-        scrollPosition = -3;
+      if (scrollPosition < -5) {
+        scrollPosition = -5;
       };
       if (lettuceCount < 1) {
         event.preventDefault();
@@ -413,6 +541,10 @@
         Third();
       } else if (scrollPosition === -3) {
         Fourth();
+      } else if (scrollPosition === -4) {
+        Fifth();
+      } else if (scrollPosition === -5) {
+        Sixth();
       }
     }
 
@@ -464,8 +596,8 @@
           if (scrollPosition > 0) {
             scrollPosition = 0;
           };
-          if (scrollPosition < -3) {
-            scrollPosition = -3;
+          if (scrollPosition < -5) {
+            scrollPosition = -5;
           };
           if (lettuceCount < 1) {
             event.preventDefault();
@@ -477,6 +609,10 @@
             Third();
           } else if (scrollPosition === -3) {
             Fourth();
+          } else if (scrollPosition === -4) {
+            Fifth();
+          } else if (scrollPosition === -5) {
+            Sixth();
           }
         } else {
           /* down swipe */
@@ -484,8 +620,8 @@
           if (scrollPosition > 0) {
             scrollPosition = 0;
           };
-          if (scrollPosition < -3) {
-            scrollPosition = -3;
+          if (scrollPosition < -5) {
+            scrollPosition = -5;
           };
           if (lettuceCount < 1) {
             event.preventDefault();
@@ -497,6 +633,10 @@
             Third();
           } else if (scrollPosition === -3) {
             Fourth();
+          } else if (scrollPosition === -4) {
+            Fifth();
+          } else if (scrollPosition === -5) {
+            Sixth();
           }
         }
       }
