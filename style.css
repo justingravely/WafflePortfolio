@@ -344,24 +344,14 @@ header img {
   width: 100%;
   height: 100%;
   display: none;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 0;
-  animation: riseIn;
   animation-duration: 0.5s;
 }
 
 .skills-wrapper {
-  margin-top: 9em;
-  margin-top: 0;
+  margin: auto;
 }
 
 .skills-inner {
-  left: 50%;
-  margin-left: -8em;
-  margin-top: 17em;
-  width: 16em;
-  position: absolute;
   border: 1px solid rgba(155, 155, 155, 0.747);
 }
 
@@ -370,8 +360,8 @@ header img {
   position: absolute;
   width: 4em;
   left: 50%;
-  margin-left: -2em;
-  margin-top: 9em;
+  margin-left: -1.5em;
+  margin-top: -2em;
 }
 
 .skills-icons {
@@ -474,7 +464,7 @@ header img {
   position: absolute;
   width: 3em;
   margin: auto;
-  margin-top: 15.5em;
+  margin-top: -18.3em;
   height: 16.5em;
   left: 50%;
   margin-left: -14em;
@@ -491,7 +481,7 @@ header img {
   position: absolute;
   width: 3em;
   margin: auto;
-  margin-top: 33em;
+  margin-top: 0em;
   height: 16.5em;
   left: 50%;
   margin-left: -14em;
@@ -534,14 +524,16 @@ header img {
 
 .wrapper-wrapper {
   margin: auto;
-  width: 75%;
+  width: 65%;
   height: 30em;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   border: 1px solid white;
-  padding: 0.5em;
+  padding: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 10px;
 }
 
@@ -560,7 +552,7 @@ a {
 
 .top-button {
   margin: auto;
-  margin-bottom: -8em;
+  margin-bottom: -4em;
   border: 1px solid white;
   width: 10em;
   height: 2em;
@@ -571,7 +563,7 @@ a {
 
 .bottom-button {
   margin: auto;
-  margin-top: -8em;
+  margin-top: -4em;
   border: 1px solid white;
   width: 10em;
   height: 2em;
@@ -592,15 +584,20 @@ a {
   animation-duration: 0.5s;
 }
 
+@media (min-width: 767px) {
+  .wrapper-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (min-width: 1000px){
   .time .column {
     width: 80%;
   }
-}
-
-@media (min-height: 780px) {
-  .skills-wrapper {
-    margin-top: 9em;
+  .wrapper-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    height: 40em;
   }
 }
+
 
