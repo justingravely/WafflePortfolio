@@ -296,48 +296,6 @@ header img {
 #about-details li {
   border-bottom: 1px solid rgb(255, 0, 255);
 }
-/* time */
-.time {
-  width: 100%;
-  height: 100%;
-  transition: 1s;
-  display: none;
-  flex-direction: column;
-  margin: auto;
-  animation: riseIn;
-  animation-duration: 0.5s;
-}
-
-.time .clockify-wrapper {
-  margin-top: 5em;
-  width: 80%;
-  margin: auto;
-}
-
-.time .row {
-  width: fit-content;
-  margin: auto;
-}
-
-.time .row .column {
-  margin: auto;
-}
-
-.time img {
-  width: 100%;
-  cursor: pointer;
-}
-
-.time p {
-  margin: auto;
-  width: fit-content;
-}
-
-#time-p {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 1em;
-}
 
 /* skills */
 .skills {
@@ -479,35 +437,23 @@ header img {
 
 .skill-names {
   position: absolute;
-  width: 3em;
-  margin: auto;
-  margin-top: 0em;
-  height: 16.5em;
+  width: fit-content;
   left: 50%;
-  margin-left: -14em;
+  margin-left: -9em;
 }
 
 .skill-names ul {
   display: flex;
+  padding: 0;
+  margin: auto;
 }
 
 .skill-names ul li {
   list-style: none;
-  margin-left: 3em;
-  transform: rotate(90deg);
-  margin-top: 2.4em;
-}
-.skill-names ul li:nth-child(2) {
-  margin-left: 1.4em;
-}
-.skill-names ul li:nth-child(3) {
-  margin-left: 0em;
-}
-.skill-names ul li:nth-child(4) {
-  margin-left: -1.1em;
-}
-.skill-names ul li:nth-child(5) {
-  margin-left: 0em;
+  padding-left: 1.23em;
+  padding-right: 1.23em;
+  padding-top: 0.7em;
+  writing-mode: vertical-lr;
 }
 
 /* projects */
@@ -525,7 +471,7 @@ header img {
 .wrapper-wrapper {
   margin: auto;
   width: 65%;
-  height: 30em;
+  height: 20em;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -535,6 +481,7 @@ header img {
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 10px;
+  overflow-y: hidden;
 }
 
 .project-wrap {
