@@ -1,5 +1,5 @@
 * {
-  
+  box-sizing: border-box;
 }
 
 body {
@@ -9,7 +9,6 @@ body {
   display: flex;
   height: 100vh;
   width: 100vw;
-  flex-direction: column;
   box-sizing: border-box;
   font-family: monospace;
   color: white;
@@ -17,25 +16,48 @@ body {
 }
 /* location *//* location *//* location *//* location *//* location *//* location *//* location *//* location */
 .location {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
   display: flex;
   flex-direction: column;
   display: none;
+  background-color: silver;
+  animation: sideBar;
+  animation-duration: 1s;
+}
+
+@keyframes sideBar {
+  0% {
+    width: 0em;
+  } 100% {
+    width: 2.5em;
+  }
 }
 
 .location-inner {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  background-color: rgb(33, 29, 51);
 }
 
 .location-inner i {
   margin: 0.3em auto;
   font-size: 1.1em;
+}
+
+/* full wrap */
+.full-wrap {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: 3px solid silver;
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 
@@ -46,14 +68,13 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  margin: auto;
   width: 100%;
   transition: .5s;
 } 
 
 .header-wrapper {
   margin: auto;
-  width: fit-content;
   padding: 1em;
   border-radius: 15px;
   animation: loadIn;
@@ -71,7 +92,7 @@ header {
   position: absolute;
   left: 50%;
   width: 5em;
-  margin-left: -2.5em;
+  margin-left: -2.9em;
   margin-top: -2em;
   font-size: 2em;
   animation: exclamation, hiddenFella;
@@ -103,7 +124,7 @@ header .header-img-wrap {
   margin: auto;
   position: absolute;
   left: 50%;
-  margin-left: -5em;
+  margin-left: -6.25em;
   margin-top: -5em;
   animation: dropIn;
   animation-iteration-count: 1;
@@ -222,6 +243,50 @@ header img {
   width: fit-content;
 }
 
+#jumpyBoi {
+  font-size: 2em;
+  width: 5em;
+  animation: jumpyBoi;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  left: 50%;
+  margin-left: -3em;
+  margin-top: 13em;
+}
+
+@keyframes jumpyBoi {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  } 
+}
+
+#pizzaTime {
+  width: 3em;
+  font-size: 2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -1em;
+  margin-top: 12.7em;
+}
+
+#helphime {
+  font-size: 0.7em;
+  position: absolute;
+  width: 8em;
+  left: 50%;
+  margin-left: -5em;
+  margin-top: 49em;
+}
+
+.tempy {
+  position: absolute;
+  left: 50%;
+  display: none;
+}
 
 /* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about */
 .about {
@@ -251,7 +316,7 @@ header img {
 }
 
 .aboutOne {
-  width: 20em;
+  width: 17.5em;
   margin: auto;
   margin-top: 0;
   text-align: center;
@@ -425,7 +490,7 @@ header img {
   margin-top: -18.3em;
   height: 16.5em;
   left: 50%;
-  margin-left: -14em;
+  margin-left: -15em;
 }
 .skill-numbers ul {
   list-style: none;
@@ -450,8 +515,8 @@ header img {
 
 .skill-names ul li {
   list-style: none;
-  padding-left: 1.23em;
-  padding-right: 1.23em;
+  padding-left: 1em;
+  padding-right: 1em;
   padding-top: 0.7em;
   writing-mode: vertical-lr;
 }
@@ -470,25 +535,23 @@ header img {
 
 .wrapper-wrapper {
   margin: auto;
-  width: 65%;
-  height: 20em;
-  overflow-y: scroll;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  width: 80%;
+  display: flex;
   border: 1px solid white;
-  padding: 3em;
-  padding-left: 1em;
-  padding-right: 1em;
   border-radius: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   overflow-y: hidden;
 }
 
-.project-wrap {
+.project-wrap a {
+  width: 10em;
+  width: 10em;
+  padding: 1em;
 }
 
 .project-wrap img {
-  width: 100%;
+  width: 20em;
   border-radius: 15px;
 }
 
@@ -532,19 +595,12 @@ a {
 }
 
 @media (min-width: 767px) {
-  .wrapper-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
+ 
 }
 
 @media (min-width: 1000px){
-  .time .column {
-    width: 80%;
-  }
-  .wrapper-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-    height: 40em;
-  }
+ 
+  
 }
 
 
