@@ -22,6 +22,7 @@ body {
   background-color: silver;
   animation: sideBar;
   animation-duration: 1s;
+  border-right: 2px solid silver;
 }
 
 @keyframes sideBar {
@@ -36,10 +37,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding: 7px 7px 7px 5px;
   text-align: center;
   background-color: rgb(33, 29, 51);
+  border-radius: 15px;
 }
 
 .location-inner i {
@@ -383,7 +384,7 @@ header img {
   position: absolute;
   width: 4em;
   left: 50%;
-  margin-left: -1.5em;
+  margin-left: -2.5em;
   margin-top: -2em;
 }
 
@@ -535,24 +536,22 @@ header img {
 
 .wrapper-wrapper {
   margin: auto;
-  width: 80%;
   display: flex;
-  border: 1px solid white;
-  border-radius: 10px;
+  width: 100%;
   padding-top: 1em;
   padding-bottom: 1em;
   overflow-y: hidden;
+  height: fit-content;
 }
 
 .project-wrap a {
-  width: 10em;
-  width: 10em;
-  padding: 1em;
+  padding-left: 0.3em;
 }
 
 .project-wrap img {
-  width: 20em;
+  width: 25em;
   border-radius: 15px;
+  padding: 0.33em;
 }
 
 a {
@@ -560,26 +559,14 @@ a {
   color: white;
 }
 
-.top-button {
+#arrow-right {
+  font-size: 2em;
   margin: auto;
-  margin-bottom: -4em;
-  border: 1px solid white;
-  width: 10em;
-  height: 2em;
-  border-radius: 15px;
-  padding-top: 0.7em;
-  text-align: center;
-}
-
-.bottom-button {
-  margin: auto;
-  margin-top: -4em;
-  border: 1px solid white;
-  width: 10em;
-  height: 2em;
-  border-radius: 15px;
-  padding-top: 0.7em;
-  text-align: center;
+  position: absolute;
+  width: 3em;
+  left: 50%;
+  margin-left: -1em;
+  margin-top: 18em;
 }
 
 /* Contact */
