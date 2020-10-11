@@ -34,7 +34,14 @@
     <i id="pizzaTime"class="fas fa-pizza-slice"></i>
     <p id="helphime">pizza time!</p>
   </div> -->
+
   </header>
+
+  
+  <!-- title -->
+  <div class="Page-Title">
+    Home
+  </div>
 
   <section class="about">
     <div class="about-wrapper">
@@ -57,7 +64,7 @@
   <!-- skills -->
   <section class="skills">
     <div class="skills-wrapper">
-      <h2>Skills</h2>
+      <h2>Skill-Progress</h2>
       <div class="skills-inner">
         <div class="skill-bar">
           <div class="bar"><i class="fab fa-html5"></i></div>
@@ -133,16 +140,16 @@
     Hi
   </section>
 
-  
-<div class="location">
-  <div class="location-inner">
-    <i id="home" class="fas fa-home"></i>
-    <i id="about" class="fas fa-address-book"></i>
-    <i id="skills" class="fas fa-wrench"></i>
-    <i id="projects" class="fas fa-briefcase"></i>
-    <i id="contact" class="fas fa-envelope"></i>
+
+  <div class="location">
+    <div class="location-inner">
+      <i id="home" class="fas fa-home"></i>
+      <i id="about" class="fas fa-address-book"></i>
+      <i id="skills" class="fas fa-wrench"></i>
+      <i id="projects" class="fas fa-briefcase"></i>
+      <i id="contact" class="fas fa-envelope"></i>
+    </div>
   </div>
-</div>
 
   <!-- big fella -->
   <script>
@@ -173,8 +180,11 @@
     projectIcon.addEventListener("click", Fifth);
     contactIcon.addEventListener("click", Sixth);
 
-        // temporary boys
-        // var tempy = document.querySelector(".tempy");
+    // temporary boys
+    // var tempy = document.querySelector(".tempy");
+
+    // Page Title
+    var title = document.querySelector(".Page-Title");
 
 
     // loading
@@ -202,6 +212,7 @@
       loading.style.display = "none";
       header.style.display = "inline";
       check.style.display = "none";
+      title.style.display = "inline";
       lettuceCount += 1;
       scrollPosition = 0;
       // tempy.style.display = "inline";
@@ -226,6 +237,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
+      // title
+      title.innerHTML = "Home";
     }
 
     function Second() {
@@ -240,20 +253,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
-    }
-
-    function Third() {
-      actualheader.style.display = "none";
-      about.style.display = "none";
-      skills.style.display = "none";
-      projects.style.display = "none";
-      contact.style.display = "none";
-      // icons
-      homeIcon.style.opacity = "0.3";
-      aboutIcon.style.opacity = "0.3";
-      skillsIcon.style.opacity = "0.3";
-      projectIcon.style.opacity = "0.3";
-      contactIcon.style.opacity = "0.3";
+         // title
+         title.innerHTML = "About";
     }
 
     function Fourth() {
@@ -268,6 +269,8 @@
       skillsIcon.style.opacity = "1";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
+         // title
+         title.innerHTML = "Skills";
     }
 
     function Fifth() {
@@ -282,6 +285,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "1";
       contactIcon.style.opacity = "0.3";
+               // title
+               title.innerHTML = "Projects";
     }
 
     function Sixth() {
@@ -296,6 +301,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "1";
+               // title
+               title.innerHTML = "Contact";
     }
 
     // scroll function

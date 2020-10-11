@@ -59,6 +59,19 @@ body {
   overflow: hidden;
 }
 
+/* title */ 
+.Page-Title {
+  position: absolute;
+  width: 5em;
+  text-align: center;
+  left: 50%;
+  margin-left: -2.5em;
+  font-size: 3em;
+  border: 1px solid red;
+  bottom: 0;
+  display: none;
+}
+
 
 
 
@@ -335,9 +348,9 @@ header img {
 .skills h2 {
   margin: auto;
   position: absolute;
-  width: 4em;
+  width: 8em;
   left: 50%;
-  margin-left: -2em;
+  margin-left: -4em;
   margin-top: -2em;
 }
 
