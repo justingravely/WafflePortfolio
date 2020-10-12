@@ -300,6 +300,7 @@ header img {
   animation: riseIn;
   animation-duration: 0.5s;
   font-size: 1.2em;
+  overflow-y: scroll;
 }
 
 .about-wrapper {
@@ -309,6 +310,7 @@ header img {
   padding: 1em;
   border-radius: 10px;
   border: 1px solid red;
+  margin-top: 7em;
 }
 
 .about .greeting {
@@ -352,16 +354,8 @@ header img {
   margin-left: -1.2em;
 }
 
-#about-details {
-  list-style: square;
-  margin: auto;
-  text-align: left;
-  width: fit-content;
-  padding: 0;
-}
-
-#about-details li {
-  border-bottom: 1px solid rgb(255, 0, 255);
+.about .time img {
+  width: 100%;
 }
 
 /* skills */
@@ -385,10 +379,12 @@ header img {
 .skills h2 {
   margin: auto;
   position: absolute;
-  width: 8em;
+  width: 10em;
   left: 50%;
-  margin-left: -4em;
+  margin-left: -5em;
   margin-top: -2em;
+  border: 1px solid red;
+  text-align: center;
 }
 
 .skills-icons {
