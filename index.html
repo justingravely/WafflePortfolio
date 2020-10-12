@@ -50,7 +50,7 @@
           <i id="device" class="fas fa-desktop"></i>
           <i id="checks" class="fas fa-check"></i>
         </div>
-        <p>I'm passionate about getting small businesses online hassle-free & with a clean finish.</p>
+        <p>I'm passionate about getting small businesses online hassle-free with a clean finish.</p>
       </div>
     </div>
   </section>
@@ -65,7 +65,7 @@
           <div class="bar"><i class="fab fa-css3-alt"></i></div>
           <div class="bar"><i id="js-id" class="fab fa-js-square"></i></div>
           <div class="bar"><i id="design-id" class="fas fa-palette"></i></div>
-          <div class="bar"><i class="fab fa-github-square"></i></div>
+          <div class="bar"><i id="github-id" class="fab fa-github-square"></i></div>
         </div>
       </div>
       <div class="skill-numbers">
@@ -94,38 +94,47 @@
       <div class="project-wrap">
         <a href="http://heavenlyhorsehealth.com/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752330125332185198/unknown.png"></a>
+            <p>Official Shop of Heavenly Horse Health</p>
       </div>
       <div class="project-wrap" id="placeholder">
         <a href="https://justingravely.github.io/FeM-Pricing-Component/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/762050870506291220/unknown.png"></a>
+            <p>Simple pricing example with JavaScript</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967950680457266/dws.png"></a>
+            <p>Joke product landing page</p>
       </div>
       <div class="project-wrap">
         <a href="https://justingravely.github.io/SimpleJesusSiteDesign/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752331172637573150/slthumb.png"></a>
+            <p>Idea for personal Christian site</p>
       </div>
-      <div class="project-wrap" id="placeholder">
+      <div class="project-wrap" id="IW">
         <a href="https://justingravely.github.io/IcyTest/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752939883928223744/designid2.png"></a>
+            <p>Design idea inspired by <a href="icywiki.com" target=" "></a>icywiki.com</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967953113153536/tribute.png"></a>
+            <p>C.S. Lewis tribute site</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967951104212992/forms.png"></a>
+            <p>Joke dog adopting form</p>
       </div>
       <div class="project-wrap">
         <a href="https://justingravely.github.io/Portfolio/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752332920038883388/OP.png"></a>
+            <p>Old portfolio from August 2020</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967947891376148/techni.png"></a>
+            <p>Documentation page</p>
       </div>
     </div>
   </section>
@@ -184,6 +193,27 @@
     // temporary boys
     // var tempy = document.querySelector(".tempy");
 
+    //Lighting
+    var light = document.querySelector(".light");
+    var dark = document.querySelector(".dark");
+    var bright = document.querySelector(".bright");
+    light.addEventListener("click", lightTime);
+    var body = document.getElementsByTagName("body")[0];
+
+    function lightTime() {
+
+      if (body.classList.contains("sun")) {
+        body.classList.remove("sun");
+        light.style.borderColor = "grey"
+        dark.style.opacity = "1"
+        bright.style.opacity = "0.3"
+      } else {
+        body.classList.add("sun");
+        light.style.borderColor = "black"
+        dark.style.opacity = "0.3"
+        bright.style.opacity = "1"
+      };
+    };
 
     // loading
     // ORIGINAL TIME WAS 3000, 4000
@@ -192,7 +222,7 @@
 
     var timeout = setTimeout(function () {
       runCode();
-    }, 1000);
+    }, 250);
 
     function runCode() {
       clearTimeout(timeout);
@@ -203,7 +233,7 @@
     }
     var timeouttwo = setTimeout(function () {
       runCodetwo();
-    }, 2000);
+    }, 500);
 
     function runCodetwo() {
       clearTimeout(timeout);

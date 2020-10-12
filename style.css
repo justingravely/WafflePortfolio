@@ -4,16 +4,21 @@
   --secondary: white;
 }
 
+.sun {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
 body {
+  background-color: var(--primary);
+  color: var(--secondary);
   margin: 0;
   padding: 0;
-  background-color: var(--primary);
   display: flex;
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
   font-family: monospace;
-  color: var(--secondary);
   overflow: hidden;
 }
 /* location *//* location *//* location *//* location *//* location *//* location *//* location *//* location */
@@ -45,7 +50,7 @@ body {
   margin-top: 0.8em;
   right: 0;
   display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.514);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 2px;
   padding-left: 4px;
   padding-right: 4px;
@@ -54,11 +59,12 @@ body {
 
 .light .bright {
   margin-right: 5px;
+  opacity: 0.3;
 }
 
 .light .dark {
   margin-left: 5px;
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .location-inner {
@@ -300,8 +306,9 @@ header img {
   margin: auto;
   width: fit-content;
   height: fit-content;
-  padding: 2em;
+  padding: 1em;
   border-radius: 10px;
+  border: 1px solid red;
 }
 
 .about .greeting {
@@ -364,6 +371,7 @@ header img {
   display: none;
   animation: riseIn;
   animation-duration: 0.5s;
+  font-weight: 500;
 }
 
 .skills-wrapper {
@@ -483,6 +491,10 @@ header img {
   margin-left: 0.17em;
 }
 
+#github-id {
+  margin-left: 0.17em;
+}
+
 .skill-numbers {
   position: absolute;
   width: 3em;
@@ -548,14 +560,24 @@ header img {
 }
 
 .project-wrap img {
-  width: 25em;
+  width: 20em;
   border-radius: 15px;
   padding: 0.33em;
+}
+
+.project-wrap p {
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+#IW a {
+text-decoration: underline;
 }
 
 /* Contact */
