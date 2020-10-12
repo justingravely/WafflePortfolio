@@ -34,14 +34,7 @@
     <i id="pizzaTime"class="fas fa-pizza-slice"></i>
     <p id="helphime">pizza time!</p>
   </div> -->
-
   </header>
-
-  
-  <!-- title -->
-  <div class="Page-Title">
-    Home
-  </div>
 
   <section class="about">
     <div class="about-wrapper">
@@ -49,14 +42,15 @@
         <h2>Hi there</h2>
       </div>
       <div class="aboutOne">
-        <p>I'm a web developer & designer with an eye for user friendly design that looks good on any device.</p>
+        <p>I'm a front-end web developer & designer with an eye for user friendly design that looks good on any device.
+        </p>
         <div class="welcome-icons">
           <i id="device" class="fas fa-mobile-alt"></i>
           <i id="checks" class="fas fa-check"></i>
           <i id="device" class="fas fa-desktop"></i>
           <i id="checks" class="fas fa-check"></i>
         </div>
-        <p>I'm passionate about getting you online hassle-free with a clean finish!</p>
+        <p>I'm passionate about getting small businesses online hassle-free & with a clean finish.</p>
       </div>
     </div>
   </section>
@@ -137,17 +131,24 @@
   </section>
 
   <section class="contact">
-    Hi
+    <p>Hi</p>
   </section>
 
 
   <div class="location">
+    <div class="loc-img-wrap">
+      <img src="images/ape.png" alt="art of waffleDoggy avatar">
+    </div>
     <div class="location-inner">
       <i id="home" class="fas fa-home"></i>
       <i id="about" class="fas fa-address-book"></i>
       <i id="skills" class="fas fa-wrench"></i>
       <i id="projects" class="fas fa-briefcase"></i>
       <i id="contact" class="fas fa-envelope"></i>
+    </div>
+    <div class="light">
+      <div class="bright"><i class="fas fa-sun"></i></div>
+      <div class="dark"><i class="fas fa-moon"></i></div>
     </div>
   </div>
 
@@ -183,9 +184,6 @@
     // temporary boys
     // var tempy = document.querySelector(".tempy");
 
-    // Page Title
-    var title = document.querySelector(".Page-Title");
-
 
     // loading
     // ORIGINAL TIME WAS 3000, 4000
@@ -212,7 +210,6 @@
       loading.style.display = "none";
       header.style.display = "inline";
       check.style.display = "none";
-      title.style.display = "inline";
       lettuceCount += 1;
       scrollPosition = 0;
       // tempy.style.display = "inline";
@@ -237,8 +234,6 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
-      // title
-      title.innerHTML = "Home";
     }
 
     function Second() {
@@ -253,8 +248,6 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
-         // title
-         title.innerHTML = "About";
     }
 
     function Fourth() {
@@ -269,8 +262,6 @@
       skillsIcon.style.opacity = "1";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
-         // title
-         title.innerHTML = "Skills";
     }
 
     function Fifth() {
@@ -285,8 +276,6 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "1";
       contactIcon.style.opacity = "0.3";
-               // title
-               title.innerHTML = "Projects";
     }
 
     function Sixth() {
@@ -301,8 +290,6 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "1";
-               // title
-               title.innerHTML = "Contact";
     }
 
     // scroll function
