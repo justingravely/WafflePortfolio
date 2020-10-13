@@ -90,6 +90,62 @@ body {
   padding: 0.3em;
 }
 
+/* scroll alert */
+.scroll-alert {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+
+.scroll-alert-inner {
+  margin: auto;
+  margin-left: 4em;
+  margin-top: 4em;
+  width: 16em;
+  height: 12em;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.scroll-alert-inner-inner {
+  margin: auto;
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.scroll-alert-inner-inner i {
+  width: 2em;
+  margin-left: -1em;
+  position: absolute;
+  margin-top: -0.6em;
+  animation: scrollAlert;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.scroll-alert-inner-inner p, .scroll-alert-inner-inner i {
+  color: ;
+}
+
+
+
+@keyframes scrollAlert {
+  0% {
+    padding-top: 0;
+  } 50% {
+    padding-top: 0.5em;
+  } 100% {
+    padding-top: 0;
+  };
+}
+
 /* full wrap */
 .full-wrap {
   margin: 0;
@@ -305,7 +361,6 @@ header img {
   padding: 1em;
   border-radius: 10px;
   margin-top: 3.5em;
-  z-index: 3;
   overflow-y: scroll;
 }
 
@@ -321,6 +376,8 @@ header img {
   margin-top: 0;
   text-align: center;
 }
+
+
 
 .dog-bath {
   background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/765390587704246272/pexels-photo-485294.png");
@@ -605,6 +662,10 @@ text-decoration: underline;
   margin-top: 0;
   animation: riseIn;
   animation-duration: 0.5s;
+}
+
+.contact p {
+  margin: auto;
 }
 
 @media (min-width: 767px) {

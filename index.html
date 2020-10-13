@@ -36,6 +36,15 @@
   </div> -->
   </header>
 
+  <div class="scroll-alert">
+    <div class="scroll-alert-inner">
+      <div class="scroll-alert-inner-inner">
+        <p>This Page Scrolls!</p>
+        <i class="fas fa-arrows-alt-v"></i>
+      </div>
+    </div>
+  </div>
+
   <section class="about">
     <div class="about-wrapper">
       <div class="greeting">
@@ -146,7 +155,7 @@
   </section>
 
   <section class="contact">
-    <p>Hi</p>
+    <p>Contacts coming soon</p>
   </section>
 
 
@@ -202,6 +211,10 @@
     projectIcon.addEventListener("click", Fifth);
     contactIcon.addEventListener("click", Sixth);
 
+    //scroll alert
+    var scrollAlert = document.querySelector(".scroll-alert");
+    var scrollAlertInner = document.querySelector(".scroll-alert-inner-inner");
+
     // temporary boys
     // var tempy = document.querySelector(".tempy");
 
@@ -219,11 +232,13 @@
         light.style.borderColor = "grey"
         dark.style.opacity = "1"
         bright.style.opacity = "0.3"
+        scrollAlertInner.style.color = "white";
       } else {
         body.classList.add("sun");
         light.style.borderColor = "black"
         dark.style.opacity = "0.3"
         bright.style.opacity = "1"
+        scrollAlertInner.style.color = "white";
       };
     };
 
@@ -234,7 +249,7 @@
 
     var timeout = setTimeout(function () {
       runCode();
-    }, 250);
+    }, 1000);
 
     function runCode() {
       clearTimeout(timeout);
@@ -245,7 +260,7 @@
     }
     var timeouttwo = setTimeout(function () {
       runCodetwo();
-    }, 500);
+    }, 2000);
 
     function runCodetwo() {
       clearTimeout(timeout);
@@ -276,6 +291,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "none";
     }
 
     function Second() {
@@ -290,6 +307,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "inline";
     }
 
     function Fourth() {
@@ -304,6 +323,9 @@
       skillsIcon.style.opacity = "1";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "none";
+
     }
 
     function Fifth() {
@@ -318,6 +340,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "1";
       contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "inline";
     }
 
     function Sixth() {
@@ -332,6 +356,8 @@
       skillsIcon.style.opacity = "0.3";
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "1";
+      // alert
+      scrollAlert.style.display = "none";
     }
 
     // scroll function
@@ -450,8 +476,10 @@
       } else {
         if (yDiff > 0) {
           /* up swipe */
+          scrollAlert.style.display = "none";
         } else {
           /* down swipe */
+          scrollAlert.style.display = "none";
         }
       }
       /* reset values */
