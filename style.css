@@ -342,6 +342,30 @@ header img {
   width: fit-content;
 }
 
+#scroll-indicator {
+  font-size: 2em;
+  position: fixed;
+  width: 6em;
+  left: 50%;
+  text-align: center;
+  bottom: 3em;
+  animation: leftRight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: none;
+  transition: 1s;
+}
+
+@keyframes leftRight {
+  0% {
+    margin-left: -2em;
+  } 50% {
+    margin-left: -4em;
+  } 100% {
+    margin-left: -2em;
+  }
+}
+
 /* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about */
 .about {
   width: 100%;
@@ -668,11 +692,89 @@ text-decoration: underline;
 
 .contact-wrapper {
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact p {
-  margin: auto;
+.contact-wrapper a {
+  cursor: pointer;
 }
+
+.contact-wrap {
+  background-color: rgba(0, 0, 53, 0.384);
+  height: 9em;
+  width: 9em;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  flex-direction: column;
+}
+
+.spinny-boy {
+  position: absolute;
+  border: 3px outset rgba(252, 64, 252, 0.534);
+  height: 9em;
+  width: 9em;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 2em;
+  margin-right: 2em;
+  flex-direction: column;
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+.contact-wrap i {
+  margin: auto;
+  font-size: 2.5em;
+  transition: 0.33s;
+}
+
+.contact-wrap i:first-child {
+  margin-top: 1em;
+}
+
+.contact-wrap p {
+  position: absolute;
+  opacity: 0;
+  margin-left: 1.5em;
+  margin-top: 2.3em;
+  transition: 0.33s;
+  font-size: 2em;
+  transition: 0.33s;
+}
+
+.contact-wrap #github {
+  margin-left: 1.25em;
+}
+
+.contact-content a:hover .contact-wrap i {
+  opacity: 0;
+}
+
+.contact-content a:hover .contact-wrap p {
+  opacity: 1;
+}
+
+#githubText, #phoneNumber, #emailText {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
 
 @media (min-width: 767px) {
  

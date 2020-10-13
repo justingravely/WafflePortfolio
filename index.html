@@ -34,6 +34,9 @@
     <i id="pizzaTime"class="fas fa-pizza-slice"></i>
     <p id="helphime">pizza time!</p>
   </div> -->
+
+  <i id="scroll-indicator" class="fas fa-arrows-alt-h"></i>
+
   </header>
 
   <div class="scroll-alert">
@@ -158,16 +161,31 @@
 
   <section class="contact">
     <div class="contact-wrapper">
-      <div class="email-contact">
-        justin42653@yahoo.com
+    <a onclick="myFunctionEmail()" onmouseout="reset()">
+      <div class="spinny-boy"></div>
+        <div class="contact-wrap">
+          <i class="fas fa-envelope"></i>
+          <p id="mail">Email</p>
+          <input type="text" value="justin42653@yahoo.com" id="emailText">
+        </div>
+    </a>  
+    <a onclick="myFunctionPhone()" onmouseout="reset()">
+      <div class="spinny-boy"></div>
+      <div class="contact-wrap">
+        <i class="fas fa-mobile-alt"></i>
+        <p id="phone">Phone</p>
+        <input type="text" value="919-753-3942" id="phoneNumber">
       </div>
-      <div class="phone-contact">
-        (919) 753-3942
+    </a>  
+    <a onclick="myFunctionGitHub()" onmouseout="reset()">
+      <div class="spinny-boy"></div>
+      <div class="contact-wrap">
+        <i class="fab fa-github"></i>
+        <p id="github">github</p>
+        <input type="text" value="https://github.com/justingravely" id="githubText">
       </div>
-      <div class="github-contact">
-        https://github.com/justingravely
-      </div>
-    </div>
+    </a>
+  </div>  
   </section>
 
 
@@ -227,6 +245,9 @@
     //scroll alert
     var scrollAlert = document.querySelector(".scroll-alert");
     var scrollAlertInner = document.querySelector(".scroll-alert-inner-inner");
+
+    // leftRight
+    var scrollIndicator = document.getElementById("scroll-indicator");
 
     // temporary boys
     // var tempy = document.querySelector(".tempy");
@@ -289,6 +310,7 @@
       projectIcon.style.opacity = "0.3";
       contactIcon.style.opacity = "0.3";
       locationInner.style.display = "inline";
+      scrollIndicator.style.display = "inline";
     };
 
     // scroll sections code
