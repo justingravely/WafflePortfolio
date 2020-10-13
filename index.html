@@ -1,121 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=100%">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <title>Justin Gravely Portfolio</title>
+  <title>waffleDoggy</title>
 </head>
-<body>
 
+<body onwheel="scrollTime(event)">
 
-<script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
-
-<navbar id="navbar">
-  <div class="bar"></div>
-  <a class="top-a" href="#"><span class="logo-text">JGravely</span><i class="fas fa-arrow-right"></i></a>
-  <ul>
-    <li><a class="no" href="https://github.com/justingravely" target="_blank"><i class="fab fa-github"></i><span class="nav-details">github.com</span></a></li>
-    <li><a class="no" href="https://twitter.com/JustinGravely8" target="_blank"><i class="fab fa-twitter"></i><span class="nav-details">Twitter</span></a></li>
-    <li><a class="no" href="#"><i class="fas fa-envelope"></i></i><span class="nav-details">justin426533@gmail.com</span></a></li>
-    <li><a id="help" class="no" href="#"><i class="fas fa-mobile-alt"></i><span class="nav-details">&nbsp;(919)753-3942</span></a></li>
-  </ul>
-  <p><span class="summary">Summary: 8/9/2020</span><br>- 2 Hours Per Day Minimum<br>- No Javascript Use Yet<br>- Mastered General HTML/CSS</p>
-</navbar>
-
-<div class="full-content-wrap">
-
-<div class="wrapper">
-
-  <section id="welcome-section">
-      <img src="https://cdn.discordapp.com/attachments/736393082831896590/736749866658562078/whomsete.png"></img>
-    <div class="welcome-wrap">
-      <h1>Justin Gravely</h1>
-      <p>self taught front end developer</p>
-      <p class="tooltip">Hover over the arrow to see clocked time</p>
+  <header>
+    <div class="header-wrapper">
+      <div class="header-img-wrap">
+        <img src="images/ape.png" alt="dog">
+      </div>
+      <div class="header-info">
+        <i id="exclamation" class="fas fa-exclamation"></i>
+        <h1 onclick="location.reload();">waffleDoggy</h1>
+        <p><span>your</span> <span>new</span> <span>website</span> <span>buddy</span></p>
+      </div>
     </div>
-  </section>
+    <i id="bone" class="fas fa-bone"></i>
+    <i id="check" class="fas fa-check"></i>
 
-  <div class="experience">
-    <a id="homer"><i class="fas fa-arrow-down"></i></a>
-    <div class="time">
-      <a href="#" ><img src="https://cdn.discordapp.com/attachments/736393082831896590/742143522127216690/prog.png"></a>
-      <p>Progress recorded with <a href="https://clockify.me/" target="_blank">clockify</a> 8/9/2020</p>
+
+    <div class="loading">
+      <p>loading<span>.</span><span>.</span><span>.</span></p>
+    </div>
+    <!-- <div class="tempy">
+    <i id="jumpyBoi" class="fas fa-dog"></i>
+    <i id="pizzaTime"class="fas fa-pizza-slice"></i>
+    <p id="helphime">pizza time!</p>
+  </div> -->
+  </header>
+
+  <div class="scroll-alert">
+    <div class="scroll-alert-inner">
+      <div class="scroll-alert-inner-inner">
+        <p>This Page Scrolls!</p>
+        <i class="fas fa-arrows-alt-v"></i>
+      </div>
     </div>
   </div>
 
-</div>
-      
-<!--  BACKUP PROJECT-TITLE - was inside "projects" section  -->
+  <section class="about">
+    <div class="about-wrapper">
+      <div class="greeting">
+        <h2>Hi there</h2>
+      </div>
+      <div class="aboutOne">
+        <p>I'm a front-end web developer & designer with an eye for user friendly design that looks good on any device.
+        </p>
+        <div class="welcome-icons">
+          <i id="device" class="fas fa-mobile-alt"></i>
+          <i id="checks" class="fas fa-check"></i>
+          <i id="device" class="fas fa-desktop"></i>
+          <i id="checks" class="fas fa-check"></i>
+        </div>
+        <p>I'm passionate about getting small businesses online hassle-free with a clean finish.</p>
+        <div class="dog-bath"></div>
+      </div>
+      <div class="time">
+        <p> I'm an open book. Below you can see my learning progress.</p>
+        <a href="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png"
+          target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png"></a>
+        <p id="clockify">Recorded with <a href="https://clockify.me/" target="_blank">clockify</a> on 10/3/2020</p>
+      </div>
+    </div>
+  </section>
 
-<section id="projects">
-    <div class="project-tile"><a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" "><img src="https://cdn.discordapp.com/attachments/736393082831896590/740967950680457266/dws.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" ">
-          <h1>- Product Landing Page -</h1>
-        </a>
-        <p>Example work</p>
+  <!-- skills -->
+  <section class="skills">
+    <div class="skills-wrapper">
+      <h2>Skill Progress</h2>
+      <div class="skills-inner">
+        <div class="skill-bar">
+          <div class="bar"><i class="fab fa-html5"></i></div>
+          <div class="bar"><i class="fab fa-css3-alt"></i></div>
+          <div class="bar"><i id="js-id" class="fab fa-js-square"></i></div>
+          <div class="bar"><i id="design-id" class="fas fa-palette"></i></div>
+          <div class="bar"><i id="github-id" class="fab fa-github-square"></i></div>
+        </div>
+      </div>
+      <div class="skill-numbers">
+        <ul>
+          <li>100%</li>
+          <li>80%</li>
+          <li>60%</li>
+          <li>40%</li>
+          <li>20%</li>
+        </ul>
+      </div>
+      <div class="skill-names">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Design</li>
+          <li>github</li>
+        </ul>
       </div>
     </div>
-    <div class="project-tile"><a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" "><img src="https://cdn.discordapp.com/attachments/736393082831896590/740970174794039338/tribute.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" ">
-          <h1>- Tribute Page -</h1>
-        </a>
-        <p>Example work</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" "><img src="https://cdn.discordapp.com/attachments/736393082831896590/740967947891376148/techni.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" ">
-          <h1>- Technical Page -</h1>
-        </a>
-        <p>Example work</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" "><img src="https://cdn.discordapp.com/attachments/736393082831896590/740967951104212992/forms.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" ">
-          <h1>- Survey Form Page -</h1>
-        </a>
-        <p>Example work</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="https://justingravely.github.io/hhh/" target="_blank"><img src="https://cdn.discordapp.com/attachments/736393082831896590/741373373984145468/hhhthumb.jpg"></a>
-      <div class="info-wrap">
-        <a href="https://justingravely.github.io/hhh/" target=" ">
-          <h1>- Heavenly Horse Health -</h1>
-        </a>
-        <p>WIP shop website</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="#"><img src="https://cdn.discordapp.com/attachments/736393082831896590/736406028211716146/sil.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" ">
-          <h1>- Placeholder -</h1>
-        </a>
-        <p>To be determined</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="#"><img src="https://cdn.discordapp.com/attachments/736393082831896590/736406028211716146/sil.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" ">
-          <h1>- Placeholder -</h1>
-        </a>
-        <p>To be determined</p>
-      </div>
-    </div>
-    <div class="project-tile"><a href="#"><img src="https://cdn.discordapp.com/attachments/736393082831896590/736406028211716146/sil.png"></a>
-      <div class="info-wrap">
-        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" ">
-          <h1>- Placeholder -</h1>
-        </a>
-        <p>To be determined</p>
-      </div>
-    </div>
-</section>
+  </section>
 
-</div>
-  
+  <section class="projects">
+    <div class="wrapper-wrapper">
+      <div class="project-wrap">
+        <a href="http://heavenlyhorsehealth.com/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752330125332185198/unknown.png"></a>
+        <p>Official Shop of HHH</p>
+      </div>
+      <div class="project-wrap" id="placeholder">
+        <a href="https://justingravely.github.io/FeM-Pricing-Component/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/762050870506291220/unknown.png"></a>
+        <p>Simple pricing example</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967950680457266/dws.png"></a>
+        <p>Joke product landing page</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://justingravely.github.io/SimpleJesusSiteDesign/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752331172637573150/slthumb.png"></a>
+        <p>Idea for personal Christian site</p>
+      </div>
+      <div class="project-wrap" id="IW">
+        <a href="https://justingravely.github.io/IcyTest/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752939883928223744/designid2.png"></a>
+        <p>Design idea inspired by <a href="icywiki.com" target=" "></a>icywiki.com</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967953113153536/tribute.png"></a>
+        <p>C.S. Lewis tribute site</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967951104212992/forms.png"></a>
+        <p>Joke dog adopting form</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://justingravely.github.io/Portfolio/" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/752332920038883388/OP.png"></a>
+        <p>Old portfolio from August 2020</p>
+      </div>
+      <div class="project-wrap">
+        <a href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" "><img
+            src="https://cdn.discordapp.com/attachments/736393082831896590/740967947891376148/techni.png"></a>
+        <p>Documentation page</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-wrapper">
+      <div class="email-contact">
+        justin42653@yahoo.com
+      </div>
+      <div class="phone-contact">
+        (919) 753-3942
+      </div>
+      <div class="github-contact">
+        https://github.com/justingravely
+      </div>
+    </div>
+  </section>
+
+
+  <div class="location">
+    <div class="loc-img-wrap">
+      <img src="images/ape.png" alt="art of waffleDoggy avatar">
+    </div>
+    <div class="logo">
+      <h2>waffleDoggy</h2>
+    </div>
+    <div class="light">
+      <div class="bright"><i class="fas fa-sun"></i></div>
+      <div class="dark"><i class="fas fa-moon"></i></div>
+    </div>
+  </div>
+
+  <div class="location-inner">
+    <i id="home" class="fas fa-home"></i>
+    <i id="about" class="fas fa-address-book"></i>
+    <i id="skills" class="fas fa-wrench"></i>
+    <i id="projects" class="fas fa-briefcase"></i>
+    <i id="contact" class="fas fa-envelope"></i>
+  </div>
+
+  <!-- big fella -->
+  <script>
+    // intro
+    var loading = document.querySelector(".loading");
+    var boney = document.getElementById("bone");
+    var header = document.querySelector(".header-wrapper");
+    var checky = document.getElementById("check");
+
+    // sections
+    var actualheader = document.querySelector("header");
+    var about = document.querySelector(".about");
+    var skills = document.querySelector(".skills");
+    var projects = document.querySelector(".projects");
+    var contact = document.querySelector(".contact");
+
+    var aboutwrapper = document.querySelector(".about-wrapper");
+
+    // sidebar
+    var sideBar = document.querySelector(".location");
+    var locationInner = document.querySelector(".location-inner")
+    var homeIcon = document.getElementById("home");
+    var aboutIcon = document.getElementById("about");
+    var skillsIcon = document.getElementById("skills");
+    var projectIcon = document.getElementById("projects");
+    var contactIcon = document.getElementById("contact");
+
+    homeIcon.addEventListener("click", First);
+    aboutIcon.addEventListener("click", Second);
+    skillsIcon.addEventListener("click", Fourth);
+    projectIcon.addEventListener("click", Fifth);
+    contactIcon.addEventListener("click", Sixth);
+
+    //scroll alert
+    var scrollAlert = document.querySelector(".scroll-alert");
+    var scrollAlertInner = document.querySelector(".scroll-alert-inner-inner");
+
+    // temporary boys
+    // var tempy = document.querySelector(".tempy");
+
+    //Lighting
+    var light = document.querySelector(".light");
+    var dark = document.querySelector(".dark");
+    var bright = document.querySelector(".bright");
+    light.addEventListener("click", lightTime);
+    var body = document.getElementsByTagName("body")[0];
+
+    function lightTime() {
+
+      if (body.classList.contains("sun")) {
+        body.classList.remove("sun");
+        light.style.borderColor = "grey"
+        dark.style.opacity = "1"
+        bright.style.opacity = "0.3"
+        scrollAlertInner.style.color = "white";
+      } else {
+        body.classList.add("sun");
+        light.style.borderColor = "black"
+        dark.style.opacity = "0.3"
+        bright.style.opacity = "1"
+        scrollAlertInner.style.color = "white";
+      };
+    };
+
+    // loading
+    // ORIGINAL TIME WAS 3000, 4000
+    // lettuceCount is the variable that prevents scrolling while loading
+    var lettuceCount = 0;
+
+    var timeout = setTimeout(function () {
+      runCode();
+    }, 1000);
+
+    function runCode() {
+      clearTimeout(timeout);
+      loading.innerHTML = "WOOF!";
+      loading.style.fontSize = "3em";
+      boney.style.display = "none";
+      checky.style.display = "inline";
+    }
+    var timeouttwo = setTimeout(function () {
+      runCodetwo();
+    }, 2000);
+
+    function runCodetwo() {
+      clearTimeout(timeout);
+      loading.style.display = "none";
+      header.style.display = "inline";
+      check.style.display = "none";
+      lettuceCount += 1;
+      scrollPosition = 0;
+      // tempy.style.display = "inline";
+      sideBar.style.display = "flex";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
+      locationInner.style.display = "inline";
+    };
+
+    // scroll sections code
+
+    function First() {
+      actualheader.style.display = "flex";
+      about.style.display = "none";
+      skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "1";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "none";
+    }
+
+    function Second() {
+      actualheader.style.display = "none";
+      about.style.display = "flex";
+      skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "1";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "inline";
+    }
+
+    function Fourth() {
+      actualheader.style.display = "none";
+      about.style.display = "none";
+      skills.style.display = "flex";
+      projects.style.display = "none";
+      contact.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "1";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "none";
+
+    }
+
+    function Fifth() {
+      actualheader.style.display = "none";
+      about.style.display = "none";
+      skills.style.display = "none";
+      projects.style.display = "flex";
+      contact.style.display = "none";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "1";
+      contactIcon.style.opacity = "0.3";
+      // alert
+      scrollAlert.style.display = "inline";
+    }
+
+    function Sixth() {
+      actualheader.style.display = "none";
+      about.style.display = "none";
+      skills.style.display = "none";
+      projects.style.display = "none";
+      contact.style.display = "flex";
+      // icons
+      homeIcon.style.opacity = "0.3";
+      aboutIcon.style.opacity = "0.3";
+      skillsIcon.style.opacity = "0.3";
+      projectIcon.style.opacity = "0.3";
+      contactIcon.style.opacity = "1";
+      // alert
+      scrollAlert.style.display = "none";
+    }
+
+    // scroll function
+    var scrollPosition = 0;
+
+
+    function scrollTime(event) {
+      var y = event.deltaY;
+      if (y < 0) {
+        scrollPosition++;
+        console.log(scrollPosition);
+      } else {
+        scrollPosition--
+        console.log(scrollPosition);
+      };
+
+      if (scrollPosition > 0) {
+        scrollPosition = 0;
+      };
+      // CHECK HERE HERE IF YOU CANT SCROLL LOWER
+      if (scrollPosition < -4) {
+        scrollPosition = -4;
+      };
+      if (lettuceCount < 1) {
+        event.preventDefault();
+      } else if (scrollPosition === 0) {
+        First();
+      } else if (scrollPosition === -1) {
+        Second();
+      } else if (scrollPosition === -2) {
+        Fourth();
+      } else if (scrollPosition === -3) {
+        Fifth();
+      } else if (scrollPosition === -4) {
+        Sixth();
+      }
+    }
+
+    // Phone Swiping by givanse on stackoverflow.com
+
+
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+
+    var xDown = null;
+    var yDown = null;
+
+    function getTouches(evt) {
+      return evt.touches ||             // browser API
+        evt.originalEvent.touches; // jQuery
+    }
+
+    function handleTouchStart(evt) {
+      const firstTouch = getTouches(evt)[0];
+      xDown = firstTouch.clientX;
+      yDown = firstTouch.clientY;
+    };
+
+    function handleTouchMove(evt) {
+      if (!xDown || !yDown) {
+        return;
+      }
+
+      var xUp = evt.touches[0].clientX;
+      var yUp = evt.touches[0].clientY;
+
+      var xDiff = xDown - xUp;
+      var yDiff = yDown - yUp;
+
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+        if (xDiff > 0) {
+          /* left swipe */
+          scrollPosition--;
+          if (scrollPosition > 0) {
+            scrollPosition = 0;
+          };
+          if (scrollPosition < -4) {
+            scrollPosition = -4;
+          };
+          if (lettuceCount < 1) {
+            event.preventDefault();
+          } else if (scrollPosition === 0) {
+            First();
+          } else if (scrollPosition === -1) {
+            Second();
+          } else if (scrollPosition === -2) {
+            Fourth();
+          } else if (scrollPosition === -3) {
+            Fifth();
+          } else if (scrollPosition === -4) {
+            Sixth();
+          }
+        } else {
+          /* right swipe */
+          scrollPosition++;
+          if (scrollPosition > 0) {
+            scrollPosition = 0;
+          };
+          if (scrollPosition < -4) {
+            scrollPosition = -4;
+          };
+          if (lettuceCount < 1) {
+            event.preventDefault();
+          } else if (scrollPosition === 0) {
+            First();
+          } else if (scrollPosition === -1) {
+            Second();
+          } else if (scrollPosition === -2) {
+            Fourth();
+          } else if (scrollPosition === -3) {
+            Fifth();
+          } else if (scrollPosition === -4) {
+            Sixth();
+          }
+        }
+      } else {
+        if (yDiff > 0) {
+          /* up swipe */
+          scrollAlert.style.display = "none";
+        } else {
+          /* down swipe */
+          scrollAlert.style.display = "none";
+        }
+      }
+      /* reset values */
+      xDown = null;
+      yDown = null;
+      console.log(scrollPosition);
+    };
+
+//  ????? no ned????
+    // var x = window.matchMedia("(min-width: 1024px)");
+    // myFunction(x);
+    // x.addListener(myFunction);
+
+  </script>
+
+
 </body>
+
 </html>
