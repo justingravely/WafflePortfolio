@@ -20,6 +20,7 @@ body {
   box-sizing: border-box;
   font-family: monospace;
   overflow: hidden;
+  z-index: 0;
 }
 /* location *//* location *//* location *//* location *//* location *//* location *//* location *//* location */
 .location {
@@ -29,6 +30,12 @@ body {
   animation: sideBar;
   animation-duration: 1s;
   width: 100%;
+}
+
+.logo {
+  margin: auto;
+  text-align: center;
+  margin-top: -0.2em;
 }
 
 .loc-img-wrap {
@@ -69,10 +76,12 @@ body {
 
 .location-inner {
   display: flex;
-  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -5.6em;
   padding: 7px 7px 7px 5px;
-  text-align: center;
   border-radius: 15px;
+  bottom: -0.5em;
 }
 
 .location-inner i {
@@ -90,20 +99,6 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
-
-/* title */ 
-.Page-Title {
-  position: absolute;
-  width: 5em;
-  text-align: center;
-  left: 50%;
-  margin-left: -2.5em;
-  margin-bottom: 0em;
-  bottom: 0;
-  font-size: 3em;
-  border: 1px solid red;
-  display: none;
 }
 
 
@@ -187,9 +182,9 @@ header .header-img-wrap {
 
 @keyframes riseIn {
   0% {
-    margin-top: 50em;
+    margin-left: 50em;
   } 100% {
-    margin-top: 0em;
+    margin-left: 0em;
   }
 }
 
@@ -305,12 +300,13 @@ header img {
 
 .about-wrapper {
   margin: auto;
-  width: fit-content;
-  height: fit-content;
+  width: 22.5em;
+  height: 82vh;
   padding: 1em;
   border-radius: 10px;
-  border: 1px solid red;
-  margin-top: 7em;
+  margin-top: 3.5em;
+  z-index: 3;
+  overflow-y: scroll;
 }
 
 .about .greeting {
@@ -320,6 +316,32 @@ header img {
 }
 
 .aboutOne {
+  width: 17.5em;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+}
+
+.dog-bath {
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/765390587704246272/pexels-photo-485294.png");
+  background-size: contain;
+  background-position: center;
+  width: 8em;
+  height: 5.4em;
+  margin: auto;
+  border-radius: 15px;
+}
+
+#clockify {
+  font-size: 0.8em;
+}
+
+#clockify a {
+  color: magenta;
+  text-decoration: underline;
+}
+
+.time {
   width: 17.5em;
   margin: auto;
   margin-top: 0;
@@ -344,8 +366,7 @@ header img {
 
 .welcome-icons #checks {
   font-size: 1em;
-  position: absolute;
-  margin-top: 2.8em;
+  margin-top: 3.5em;
   margin-left: -1.6em;
   color: rgb(255, 0, 255);
 }
@@ -370,6 +391,7 @@ header img {
 
 .skills-wrapper {
   margin: auto;
+  margin-top: 12em;
 }
 
 .skills-inner {
@@ -378,12 +400,8 @@ header img {
 
 .skills h2 {
   margin: auto;
-  position: absolute;
   width: 10em;
-  left: 50%;
-  margin-left: -5em;
-  margin-top: -2em;
-  border: 1px solid red;
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -492,13 +510,11 @@ header img {
 }
 
 .skill-numbers {
-  position: absolute;
   width: 3em;
   margin: auto;
   margin-top: -18.3em;
   height: 16.5em;
-  left: 50%;
-  margin-left: -13.75em;
+  margin-left: -5.5em;
 }
 .skill-numbers ul {
   list-style: none;
@@ -509,10 +525,9 @@ header img {
 }
 
 .skill-names {
-  position: absolute;
   width: fit-content;
-  left: 50%;
-  margin-left: -8em;
+  margin-left: 0em;
+  margin-top: 0.77em;
 }
 
 .skill-names ul {
@@ -544,15 +559,19 @@ header img {
 .wrapper-wrapper {
   margin: auto;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  overflow-y: hidden;
-  height: fit-content;
+  height: 78vh;
+  overflow-y: scroll;
+  margin-top: 5em;
+}
+
+.project-wrap {
+  margin: auto;
 }
 
 .project-wrap a {
-  padding-left: 0.3em;
+  margin: auto;
 }
 
 .project-wrap img {

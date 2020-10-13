@@ -51,6 +51,12 @@
           <i id="checks" class="fas fa-check"></i>
         </div>
         <p>I'm passionate about getting small businesses online hassle-free with a clean finish.</p>
+        <div class="dog-bath"></div>
+      </div>
+      <div class="time">
+        <p> I'm an open book. Below you can see my learning progress.</p>
+        <a href="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png" target=" "><img src="https://cdn.discordapp.com/attachments/736393082831896590/762049992918564884/seeeee.png"></a>
+        <p id="clockify">Recorded with <a href="https://clockify.me/" target="_blank">clockify</a> on 10/3/2020</p>
       </div>
     </div>
   </section>
@@ -58,7 +64,7 @@
   <!-- skills -->
   <section class="skills">
     <div class="skills-wrapper">
-      <h2>Skill-Progress</h2>
+      <h2>Skill Progress</h2>
       <div class="skills-inner">
         <div class="skill-bar">
           <div class="bar"><i class="fab fa-html5"></i></div>
@@ -94,47 +100,47 @@
       <div class="project-wrap">
         <a href="http://heavenlyhorsehealth.com/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752330125332185198/unknown.png"></a>
-            <p>Official Shop of Heavenly Horse Health</p>
+        <p>Official Shop of HHH</p>
       </div>
       <div class="project-wrap" id="placeholder">
         <a href="https://justingravely.github.io/FeM-Pricing-Component/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/762050870506291220/unknown.png"></a>
-            <p>Simple pricing example with JavaScript</p>
+        <p>Simple pricing example</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/RwrXRwV" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967950680457266/dws.png"></a>
-            <p>Joke product landing page</p>
+        <p>Joke product landing page</p>
       </div>
       <div class="project-wrap">
         <a href="https://justingravely.github.io/SimpleJesusSiteDesign/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752331172637573150/slthumb.png"></a>
-            <p>Idea for personal Christian site</p>
+        <p>Idea for personal Christian site</p>
       </div>
       <div class="project-wrap" id="IW">
         <a href="https://justingravely.github.io/IcyTest/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752939883928223744/designid2.png"></a>
-            <p>Design idea inspired by <a href="icywiki.com" target=" "></a>icywiki.com</p>
+        <p>Design idea inspired by <a href="icywiki.com" target=" "></a>icywiki.com</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/NWxLeEG" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967953113153536/tribute.png"></a>
-            <p>C.S. Lewis tribute site</p>
+        <p>C.S. Lewis tribute site</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/YzwRyMV" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967951104212992/forms.png"></a>
-            <p>Joke dog adopting form</p>
+        <p>Joke dog adopting form</p>
       </div>
       <div class="project-wrap">
         <a href="https://justingravely.github.io/Portfolio/" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/752332920038883388/OP.png"></a>
-            <p>Old portfolio from August 2020</p>
+        <p>Old portfolio from August 2020</p>
       </div>
       <div class="project-wrap">
         <a href="https://codepen.io/WaffleDoggy/full/oNbVYwe" target=" "><img
             src="https://cdn.discordapp.com/attachments/736393082831896590/740967947891376148/techni.png"></a>
-            <p>Documentation page</p>
+        <p>Documentation page</p>
       </div>
     </div>
   </section>
@@ -148,17 +154,21 @@
     <div class="loc-img-wrap">
       <img src="images/ape.png" alt="art of waffleDoggy avatar">
     </div>
-    <div class="location-inner">
-      <i id="home" class="fas fa-home"></i>
-      <i id="about" class="fas fa-address-book"></i>
-      <i id="skills" class="fas fa-wrench"></i>
-      <i id="projects" class="fas fa-briefcase"></i>
-      <i id="contact" class="fas fa-envelope"></i>
+    <div class="logo">
+      <h2>waffleDoggy</h2>
     </div>
     <div class="light">
       <div class="bright"><i class="fas fa-sun"></i></div>
       <div class="dark"><i class="fas fa-moon"></i></div>
     </div>
+  </div>
+
+  <div class="location-inner">
+    <i id="home" class="fas fa-home"></i>
+    <i id="about" class="fas fa-address-book"></i>
+    <i id="skills" class="fas fa-wrench"></i>
+    <i id="projects" class="fas fa-briefcase"></i>
+    <i id="contact" class="fas fa-envelope"></i>
   </div>
 
   <!-- big fella -->
@@ -175,6 +185,8 @@
     var skills = document.querySelector(".skills");
     var projects = document.querySelector(".projects");
     var contact = document.querySelector(".contact");
+
+    var aboutwrapper = document.querySelector(".about-wrapper");
 
     // sidebar
     var sideBar = document.querySelector(".location");
@@ -328,7 +340,6 @@
 
     function scrollTime(event) {
       var y = event.deltaY;
-
       if (y < 0) {
         scrollPosition++;
         console.log(scrollPosition);
@@ -359,10 +370,6 @@
       }
     }
 
-  </script>
-
-  <!-- Phone Swiping by givanse on stackoverflow.com -->
-  <script>
     // Phone Swiping by givanse on stackoverflow.com
 
 
@@ -397,12 +404,6 @@
       if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
         if (xDiff > 0) {
           /* left swipe */
-        } else {
-          /* right swipe */
-        }
-      } else {
-        if (yDiff > 0) {
-          /* up swipe */
           scrollPosition--;
           if (scrollPosition > 0) {
             scrollPosition = 0;
@@ -424,7 +425,7 @@
             Sixth();
           }
         } else {
-          /* down swipe */
+          /* right swipe */
           scrollPosition++;
           if (scrollPosition > 0) {
             scrollPosition = 0;
@@ -446,13 +447,26 @@
             Sixth();
           }
         }
+      } else {
+        if (yDiff > 0) {
+          /* up swipe */
+        } else {
+          /* down swipe */
+        }
       }
       /* reset values */
       xDown = null;
       yDown = null;
       console.log(scrollPosition);
     };
+
+//  ????? no ned????
+    // var x = window.matchMedia("(min-width: 1024px)");
+    // myFunction(x);
+    // x.addListener(myFunction);
+
   </script>
+
 
 </body>
 
