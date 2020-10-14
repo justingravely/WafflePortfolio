@@ -246,6 +246,14 @@ header .header-img-wrap {
   }
 }
 
+@keyframes riseOut {
+  0% {
+    margin-left: -50em;
+  } 100% {
+    margin-left: 0em;
+  }
+}
+
 header img {
   width: 100%;
   border-radius: 50%;
@@ -353,7 +361,7 @@ header img {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   display: none;
-  transition: 1s;
+  transition: .1s;
 }
 
 @keyframes leftRight {
@@ -364,6 +372,19 @@ header img {
   } 100% {
     margin-left: -2em;
   }
+}
+
+.swipe-command {
+  position: fixed;
+  height: 3em;
+  width: 10em;
+  left: 50%;
+  margin-left: -5em;
+  bottom: 7.2em;
+  border-radius: 50px;
+  border: 1px solid white;
+  transition: 0.5s;
+  display: none;
 }
 
 /* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about *//* about */
@@ -744,7 +765,7 @@ text-decoration: underline;
   margin-left: 1.5em;
   margin-top: 2.3em;
   transition: 0.33s;
-  font-size: 2em;
+  font-size: 1.6em;
   transition: 0.33s;
 }
 
@@ -752,11 +773,11 @@ text-decoration: underline;
   margin-left: 1.25em;
 }
 
-.contact-content a:hover .contact-wrap i {
+.contact-wrapper a:hover i {
   opacity: 0;
 }
 
-.contact-content a:hover .contact-wrap p {
+.contact-wrapper a:hover p {
   opacity: 1;
 }
 

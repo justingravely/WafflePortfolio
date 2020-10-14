@@ -35,7 +35,9 @@
     <p id="helphime">pizza time!</p>
   </div> -->
 
-  <i id="scroll-indicator" class="fas fa-arrows-alt-h"></i>
+    <div class="swipe-command">
+      <i id="scroll-indicator" class="fas fa-arrows-alt-h"></i>
+    </div>
 
   </header>
 
@@ -161,31 +163,73 @@
 
   <section class="contact">
     <div class="contact-wrapper">
-    <a onclick="myFunctionEmail()" onmouseout="reset()">
-      <div class="spinny-boy"></div>
+      <a id="email" onclick="myFunctionEmail()" onmouseout="reset()">
+        <div class="spinny-boy"></div>
         <div class="contact-wrap">
           <i class="fas fa-envelope"></i>
           <p id="mail">Email</p>
           <input type="text" value="justin42653@yahoo.com" id="emailText">
         </div>
-    </a>  
-    <a onclick="myFunctionPhone()" onmouseout="reset()">
-      <div class="spinny-boy"></div>
-      <div class="contact-wrap">
-        <i class="fas fa-mobile-alt"></i>
-        <p id="phone">Phone</p>
-        <input type="text" value="919-753-3942" id="phoneNumber">
-      </div>
-    </a>  
-    <a onclick="myFunctionGitHub()" onmouseout="reset()">
-      <div class="spinny-boy"></div>
-      <div class="contact-wrap">
-        <i class="fab fa-github"></i>
-        <p id="github">github</p>
-        <input type="text" value="https://github.com/justingravely" id="githubText">
-      </div>
-    </a>
-  </div>  
+      </a>
+      <a onclick="myFunctionPhone()" onmouseout="reset()">
+        <div class="spinny-boy"></div>
+        <div class="contact-wrap">
+          <i class="fas fa-mobile-alt"></i>
+          <p id="phone">Phone</p>
+          <input type="text" value="919-753-3942" id="phoneNumber">
+        </div>
+      </a>
+      <a onclick="myFunctionGitHub()" onmouseout="reset()">
+        <div class="spinny-boy"></div>
+        <div class="contact-wrap">
+          <i class="fab fa-github"></i>
+          <p id="github">github</p>
+          <input type="text" value="https://github.com/justingravely" id="githubText">
+        </div>
+      </a>
+    </div>
+    <!-- CONTACTS COPY SCRIPT -->
+    <script>
+      function myFunctionGitHub() {
+        var copyText = document.getElementById("githubText");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        document.getElementById("github").innerHTML = "Copied";
+      }
+
+      function myFunctionEmail() {
+        var copyText = document.getElementById("emailText");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        document.getElementById("mail").innerHTML = "Copied";
+        document.getElementById("mail").style.marginLeft = "1.3em";
+      }
+
+      function myFunctionPhone() {
+        var copyText = document.getElementById("phoneNumber");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        document.getElementById("phone").innerHTML = "Copied";
+        document.getElementById("phone").style.marginLeft = "1.35em";
+      }
+
+      function reset() {
+        // github
+        document.getElementById("github").innerHTML = "github";
+        document.getElementById("phone").style.marginLeft = "1.25em";
+
+        // email
+        document.getElementById("mail").innerHTML = "Email";
+        document.getElementById("mail").style.marginLeft = "1.5em";
+
+        // phone
+        document.getElementById("phone").innerHTML = "Phone";
+        document.getElementById("phone").style.marginLeft = "1.5em";
+      }
+    </script>
   </section>
 
 
@@ -236,11 +280,11 @@
     var projectIcon = document.getElementById("projects");
     var contactIcon = document.getElementById("contact");
 
-    homeIcon.addEventListener("click", First);
-    aboutIcon.addEventListener("click", Second);
-    skillsIcon.addEventListener("click", Fourth);
-    projectIcon.addEventListener("click", Fifth);
-    contactIcon.addEventListener("click", Sixth);
+    homeIcon.addEventListener("click", homeFunction);
+    aboutIcon.addEventListener("click", aboutFunction);
+    skillsIcon.addEventListener("click", skillsFunction);
+    projectIcon.addEventListener("click", projectsSection);
+    contactIcon.addEventListener("click", contactSection);
 
     //scroll alert
     var scrollAlert = document.querySelector(".scroll-alert");
@@ -258,6 +302,7 @@
     var bright = document.querySelector(".bright");
     light.addEventListener("click", lightTime);
     var body = document.getElementsByTagName("body")[0];
+    var swipeCommand = document.querySelector(".swipe-command");
 
     function lightTime() {
 
@@ -267,12 +312,14 @@
         dark.style.opacity = "1"
         bright.style.opacity = "0.3"
         scrollAlertInner.style.color = "white";
+        swipeCommand.style.borderColor = "white";
       } else {
         body.classList.add("sun");
         light.style.borderColor = "black"
         dark.style.opacity = "0.3"
         bright.style.opacity = "1"
         scrollAlertInner.style.color = "white";
+        swipeCommand.style.borderColor = "black";
       };
     };
 
@@ -283,7 +330,7 @@
 
     var timeout = setTimeout(function () {
       runCode();
-    }, 1000);
+    }, 250);
 
     function runCode() {
       clearTimeout(timeout);
@@ -294,7 +341,7 @@
     }
     var timeouttwo = setTimeout(function () {
       runCodetwo();
-    }, 2000);
+    }, 500);
 
     function runCodetwo() {
       clearTimeout(timeout);
@@ -311,11 +358,12 @@
       contactIcon.style.opacity = "0.3";
       locationInner.style.display = "inline";
       scrollIndicator.style.display = "inline";
+      swipeCommand.style.display = "inline";
     };
 
     // scroll sections code
 
-    function First() {
+    function homeFunction() {
       actualheader.style.display = "flex";
       about.style.display = "none";
       skills.style.display = "none";
@@ -329,9 +377,11 @@
       contactIcon.style.opacity = "0.3";
       // alert
       scrollAlert.style.display = "none";
+      // swipe directions
+      about.style.animationName = "riseIn";
     }
 
-    function Second() {
+    function aboutFunction() {
       actualheader.style.display = "none";
       about.style.display = "flex";
       skills.style.display = "none";
@@ -345,9 +395,11 @@
       contactIcon.style.opacity = "0.3";
       // alert
       scrollAlert.style.display = "inline";
+      // swipe directions
+      skills.style.animationName = "riseIn";
     }
 
-    function Fourth() {
+    function skillsFunction() {
       actualheader.style.display = "none";
       about.style.display = "none";
       skills.style.display = "flex";
@@ -361,10 +413,12 @@
       contactIcon.style.opacity = "0.3";
       // alert
       scrollAlert.style.display = "none";
-
+      // swipe directions
+      about.style.animationName = "riseOut";
+      projects.style.animationName = "riseIn";
     }
 
-    function Fifth() {
+    function projectsSection() {
       actualheader.style.display = "none";
       about.style.display = "none";
       skills.style.display = "none";
@@ -378,9 +432,12 @@
       contactIcon.style.opacity = "0.3";
       // alert
       scrollAlert.style.display = "inline";
+      // swipe directions
+      skills.style.animationName = "riseOut";
+      contact.style.animationName = "riseIn";
     }
 
-    function Sixth() {
+    function contactSection() {
       actualheader.style.display = "none";
       about.style.display = "none";
       skills.style.display = "none";
@@ -394,6 +451,8 @@
       contactIcon.style.opacity = "1";
       // alert
       scrollAlert.style.display = "none";
+      // swipe directions
+      projects.style.animationName = "riseOut";
     }
 
     // scroll function
@@ -420,15 +479,15 @@
       if (lettuceCount < 1) {
         event.preventDefault();
       } else if (scrollPosition === 0) {
-        First();
+        homeFunction();
       } else if (scrollPosition === -1) {
-        Second();
+        aboutFunction();
       } else if (scrollPosition === -2) {
-        Fourth();
+        skillsFunction();
       } else if (scrollPosition === -3) {
-        Fifth();
+        projectsSection();
       } else if (scrollPosition === -4) {
-        Sixth();
+        contactSection();
       }
     }
 
@@ -476,15 +535,15 @@
           if (lettuceCount < 1) {
             event.preventDefault();
           } else if (scrollPosition === 0) {
-            First();
+            homeFunction();
           } else if (scrollPosition === -1) {
-            Second();
+            aboutFunction();
           } else if (scrollPosition === -2) {
-            Fourth();
+            skillsFunction();
           } else if (scrollPosition === -3) {
-            Fifth();
+            projectsSection();
           } else if (scrollPosition === -4) {
-            Sixth();
+            contactSection();
           }
         } else {
           /* right swipe */
@@ -498,15 +557,15 @@
           if (lettuceCount < 1) {
             event.preventDefault();
           } else if (scrollPosition === 0) {
-            First();
+            homeFunction();
           } else if (scrollPosition === -1) {
-            Second();
+            aboutFunction();
           } else if (scrollPosition === -2) {
-            Fourth();
+            skillsFunction();
           } else if (scrollPosition === -3) {
-            Fifth();
+            projectsSection();
           } else if (scrollPosition === -4) {
-            Sixth();
+            contactSection();
           }
         }
       } else {
